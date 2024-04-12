@@ -5,6 +5,8 @@ Code and data for Harnessing the Power of Prompt Experts: Efficient Knowledge Di
 The key idea is to use different task-specific trainable prompts to extract different views of samples for supervising student models.
 We further employ an uncertainty-based mechanism and a selector module to increase robustness and correctness. 
 
+We release part of the code of our proposed method. The complete version will be released in the future.
+
 ### Setup
 We recommand to setup the running enviroment via conda:
 
@@ -22,14 +24,14 @@ For SuperGLUE datasets, we download them from the Huggingface Datasets APIs (emb
 Run training scripts in [run_script](run_script) (e.g., RoBERTa for RTE):
 
 ```shell
-bash run_script/run_rte_roberta.sh
+bash run_script/run_rte_roberta_teacher.sh
 ```
 
 ### Distillation
 Specify the teacher path in the run_kd.sh and execute the script for training the student model:
 
 ```shell
-bash run_script/run_rte_roberta.sh
+bash run_script/run_rte_roberta_kd.sh
 ```
 
 
